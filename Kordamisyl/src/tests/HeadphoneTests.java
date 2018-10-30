@@ -9,6 +9,9 @@ import kordamisylesanded.Headphone;
 
 public class HeadphoneTests {
 	
+	Headphone headphoneOdavad = new Headphone("Philips", 5.4, false);
+	Headphone headphoneKallid = new Headphone("Sony", 40.4, false);
+	
 	@Test
 	public void isOnePlusTwoEqualsThree() {
 		assertThat(1 + 2, is(3));
@@ -16,14 +19,24 @@ public class HeadphoneTests {
 	
 	@Test
 	public void baseLoweredPriceCalculation() {
-		Headphone headphone1 = new Headphone("Sony", false);
-		headphone1.setPrice(5.4);
-		System.out.println(headphone1);
-		Double arvutatudHind = headphone1.get10LowerPrice();
-		System.out.println("10% allahindlus " + arvutatudHind);
+		
+		/*Headphone headphoneOdavad = new Headphone("Philips", 5.4, false);
+		Double arvutatudHind = headphoneOdavad.get10LowerPrice();
 		Double oodatudHind = 4.86;
-		System.out.printf("Oodatud tulem %.2f \n", oodatudHind);
-		System.out.println("Kas on oodatud tulem? " + arvutatudHind.equals(oodatudHind));
-		//assertThat(1 + 2, is(3));
+		
+		assertThat(arvutatudHind, is(oodatudHind)); */
+		
+		assertThat(headphoneOdavad.getLowerPrice(),is(4.86));
 	}
+	
+	@Test
+	public void customLoweredPriceCalculation() {
+		assertThat(headphoneOdavad.getLowerPrice(30), is(3.78));
+	}
+	
+	@Test
+	public void loweredPriceCalculationOver100Percent() {
+		headphoneOdavad.getLowerPrice(110);
+	}
+	
 }
