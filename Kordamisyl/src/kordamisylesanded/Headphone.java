@@ -82,11 +82,14 @@ public class Headphone {
 		return "Täna suurepärased " + (isWired ? "juhtmega" : "juhtmeta") + " kõrvaklapid " + brand + " hinnaga " + price;
 	}
 
-	public double get10LowerPrice() {
+	public double getLowerPrice() {
 		return getLowerPrice(10);
 	}
 	
 	public double getLowerPrice(int procent) {
+		if (procent > 100) {
+			throw new IllegalArgumentException("Protsent ei saa olla üle 100. Sisestatud väärtus " + procent);
+		}
 		return (100-procent)*price/100;
 	}
 }
