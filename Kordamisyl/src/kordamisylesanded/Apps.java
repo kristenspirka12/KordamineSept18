@@ -14,7 +14,7 @@ public class Apps {
 		System.out.println(headphone1);
 		//System.out.println("10% allahindlus " + headphone1.get10LowerPrice());
 		//System.out.println("Oodatud tulem 4,86");
-		Double arvutatudHind = headphone1.get10LowerPrice();
+		Double arvutatudHind = headphone1.getLowerPrice();
 		System.out.println("10% allahindlus " + arvutatudHind);
 		Double oodatudHind = 4.86;
 		System.out.printf("Oodatud tulem %.2f \n", oodatudHind);
