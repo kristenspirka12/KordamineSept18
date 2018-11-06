@@ -21,4 +21,22 @@ public class ListExtentionsTests {
 		
 		assertThat(ListExtentions.addList(list1, list2), is(result));
 	}
+	
+	@Test
+	public void addingListToAnotherMultipleValues() {
+		List<String> list1 = new ArrayList<>(Arrays.asList("one", "two"));
+		List<String> list2 = new ArrayList<>(Arrays.asList("three", "four"));
+		List<String> result = new ArrayList<>(Arrays.asList("one", "two", "three", "four"));
+		
+		assertThat(ListExtentions.addList(list1, list2), is(result));
+	}
+	
+	@Test
+	public void addingListToBeginning() {
+		List<String> list1 = new ArrayList<>(Arrays.asList("one"));
+		List<String> list2 = new ArrayList<>(Arrays.asList("two"));
+		List<String> result = new ArrayList<>(Arrays.asList("one", "two"));
+		
+		assertThat(ListExtentions.addList(list1, list2), is(result));
+	}
 }
