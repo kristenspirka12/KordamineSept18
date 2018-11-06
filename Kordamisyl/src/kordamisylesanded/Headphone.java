@@ -15,6 +15,9 @@ public class Headphone {
 	}
 
 	public Headphone(String brand, double price, boolean isWired) {
+		if (price < 0) {
+			throw new IllegalArgumentException("Hind ei saa olla negatiivne. Sisestatud" + price);
+		}
 		this.brand = brand;
 		this.price = price;
 		this.isWired = isWired;
@@ -45,6 +48,9 @@ public class Headphone {
 	 * @param price the price to set
 	 */
 	public void setPrice(double price) {
+		if (price < 0) {
+			throw new IllegalArgumentException("Hind ei saa olla negatiivne. Sisestatud" + price);
+		}
 		this.price = price;
 	}
 
@@ -90,6 +96,10 @@ public class Headphone {
 		if (procent > 100) {
 			throw new IllegalArgumentException("Protsent ei saa olla üle 100. Sisestatud väärtus " + procent);
 		}
+		if (procent < 0) {
+			throw new IllegalArgumentException("Protsent ei saa olla negatiivne. Sisestatud väärtus " + procent);
+		}
+		
 		return (100-procent)*price/100;
 	}
 }
