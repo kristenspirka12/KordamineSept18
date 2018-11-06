@@ -65,52 +65,5 @@ public class Apps {
 		//System.out.println(headphone1.getPromo());
 		//System.out.println(headphone1.get10LowerPrice());
 		//System.out.println(headphone1.getLowerPrice(25));
-		
-
-		//System.out.println(startsWithA(csvList));
-		//System.out.println(isVowel('P'));
-	}
-
-	public static List<String> startsWithA(List<String> list) {
-		/* Variant 1
-		 List<String> result = new ArrayList<>(); 
-		 for (String item : list) { 
-			 if (item.startsWith("a")) { 
-				 result.add(item); 
-			 } 
-		 } 
-		 return result; */
-		 
-
-		// Variant 2
-		return list.stream()
-				.filter(item -> item.toLowerCase().startsWith("a"))
-				.collect(Collectors.toList());
-	}
-
-	public static List<String> startsWithVowel(List<String> list) {
-		/* Variant 1 
-		  return list.stream() 
-		  		.filter(item -> item.matches("(?i)[aeiou].*"))
-		  		.collect(Collectors.toList()); */
-		 
-		// Variant 2
-		return list.stream()
-				.filter(item -> isVowel(getFirstChar(item)))
-				.collect(Collectors.toList());
-	}
-
-	public static boolean isVowel(char ch) {
-		// return "aeiou".contains(Character.toString(ch).toLowerCase());
-		return isCharInArray(ch, "aeiou".toCharArray());
-	}
-
-	public static boolean isCharInArray(char ch, char[] chars) {
-		return String.valueOf(chars).contains(Character.toString(ch).toLowerCase());
-	}
-
-	// getFirstChar("maja") -> "m"
-	public static char getFirstChar(String str) {
-		return str.charAt(0);
 	}
 }
