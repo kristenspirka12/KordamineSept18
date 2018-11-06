@@ -6,11 +6,18 @@ import java.util.StringTokenizer;
 
 public class CsvExtention {
 	
+	String[] csvArray = csvToArray("tool=, laud, lamp, arvuti");
+	//System.out.println(Arrays.toString(csvArray));
+	//System.out.println(csvArray[1]);
+	
+	List<String> csvList = csvToList("maja, auto, koduloom, arvuti, Juku, elamu");
+	//System.out.println(csvList);
+	//System.out.println(csvList.get(1));
 	
 	public static String[] csvToArray(String csvStr) {
 		return csvStr.split("\\s*(,)\\s*");
 	}
-
+	
 	public static List<String> csvToList(String csvStr) {
 		/* Variant 1
 		List<String> result = new ArrayList<>();
