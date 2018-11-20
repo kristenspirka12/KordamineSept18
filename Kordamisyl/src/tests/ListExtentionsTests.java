@@ -39,4 +39,22 @@ public class ListExtentionsTests {
 		
 		assertThat(ListExtentions.addList(list1, list2), is(result));
 	}
+	
+	@Test
+	public void addListAlternatelyCorrectResultSize() {
+		List<String> list1 = new ArrayList<>(Arrays.asList("one"));
+		List<String> list2 = new ArrayList<>(Arrays.asList("three", "four"));
+		
+		assertThat(ListExtentions.addListAlternately(list1, list2).size(), is(3));
+	}
+	
+	@Test
+	public void addListAlternatelyCorrectElements() {
+		List<String> list1 = new ArrayList<>(Arrays.asList("one"));
+		List<String> list2 = new ArrayList<>(Arrays.asList("three", "four" ));
+		List<String> result = new ArrayList<>(Arrays.asList("one","three", "four"));
+		
+		assertThat(ListExtentions.addListAlternately(list1, list2), is(result));
+	}
+	
 }
