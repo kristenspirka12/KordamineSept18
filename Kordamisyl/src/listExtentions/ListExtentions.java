@@ -31,7 +31,7 @@ public class ListExtentions {
 		}
 		return result;
 
-		// Variant, kui listid peavad olema �he pikkused.
+		// Variant, kui listid peavad olema ühepikkused.
 		/* List<String> result = new ArrayList<>();
 		if (listA.size() != listB.size())
 			throw new IllegalArgumentException("Listid peavad olema ühepikkused.");
