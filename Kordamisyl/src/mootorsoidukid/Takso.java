@@ -15,10 +15,10 @@ public class Takso extends Auto {
 		super(hetkeKiirus, telgedeArv, valjalaskeAasta, mark, numbriMärk, maksimaalneKiirus);
 	}
 
-	public void satiLabisoiduAndmed(double kilomeetriHind, int odomeeteriNait, double keskmineKütuseKulu) {
+	public void satiLabisoiduAndmed(double kilomeetriHind, int odomeetriNait, double keskmineKytuseKulu) {
 		this.kilomeetriHind = kilomeetriHind;
 		this.odomeetriNait = odomeetriNait;
-		this.keskmineKytuseKulu = keskmineKütuseKulu;
+		this.keskmineKytuseKulu = keskmineKytuseKulu;
 	}
 
 	public void lisaUksed(Uks... uksed) {
@@ -29,6 +29,31 @@ public class Takso extends Auto {
 	
 	public int annaKorralisteHooldusteArv(int hooldusvalp) {
 		return this.odomeetriNait/hooldusvalp;
+	}
+	
+	public double annaTaksoSoiduEestTasutudSumma(int kilomeetrid) {
+		return this.kilomeetriHind*kilomeetrid;
+	}
+	
+	public double annaUmbkaudneBensiiniKuluKilometraaziJargi() {
+		return this.odomeetriNait/100*keskmineKytuseKulu;
+		
+	}
+	
+	public void sulgeUks(UkseLiik ukseLiik) {
+		for (Uks uks : uksed) {
+			if (uks.annaLiik().equals(ukseLiik)) {
+				uks.sulge();
+			}
+		}
+	}
+	
+	public void sulgeKoikUksed() {
+		uksed.forEach(uks -> uks.sulge());
+	}
+	
+	public List<Uks> annaUksed() {
+		return this.uksed;
 	}
 }
 		
