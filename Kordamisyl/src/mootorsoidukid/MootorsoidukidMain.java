@@ -16,7 +16,7 @@ public class MootorsoidukidMain {
 		takso1.lisaUksed(new Uks(false, UkseLiik.EESMINE_PAREM), new Uks(true, UkseLiik.EESMINE_VASAK));
 		takso1.sulgeUks(UkseLiik.EESMINE_VASAK);
 		takso1.sulgeKoikUksed();
-		System.out.println(takso1.annaUksed());
+		System.out.println(takso1.annaUksed().equals(takso1));
 		
 		System.out.println(takso1.annaUmbkaudneBensiiniKuluKilometraaziJargi());
 		System.out.println(takso1.annaTaksoSoiduEestTasutudSumma(15));
