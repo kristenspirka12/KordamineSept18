@@ -5,12 +5,12 @@ import java.util.Date;
 public abstract class Loom {
 	private String nimi;
 	private String toug;
-	private Date sünniaeg;
+	private Date sunniaeg;
 	
-	public Loom(String nimi, String toug, Date sünniaeg) {
+	public Loom(String nimi, String toug, Date sunniaeg) {
 		this.nimi = nimi;
 		this.toug = toug;
-		this.sünniaeg = sünniaeg;
+		this.sunniaeg = sunniaeg;
 	}
 
 	/* (non-Javadoc)
@@ -18,7 +18,7 @@ public abstract class Loom {
 	 */
 	@Override
 	public String toString() {
-		return "Loom [nimi=" + nimi + ", toug=" + toug + ", sünniaeg=" + sünniaeg + ", " + "]";
+		return "Loom [nimi=" + nimi + ", toug=" + toug + ", sunniaeg=" + sunniaeg + ", " + "]";
 	}
 	
 	
