@@ -14,5 +14,7 @@ public class Kass extends Loom{
 	}
 	
 	//TODO Luua meetod, mis lisab uue loomapassi.
-	
+	public void lisaLoomapass(Loomapass loomapass) {
+		this.loomapass.add(loomapass);
+	}
 }

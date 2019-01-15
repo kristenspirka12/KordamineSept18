@@ -10,6 +10,14 @@ public class LoomMain {
 		
 		Loom koduloom2 = new Kass("Nurri", "siiami", LocalDate.of(2009, 07, 12));
 		System.out.println(koduloom2);
+		
+		Kass koduloom3 = new Kass("Triibu", "parsia", LocalDate.of(2012, 11, 30));
+		Loomapass triibuPass = new Loomapass(5, "hallikas", false);
+		
+		triibuPass.votaArvele();
+		koduloom3.lisaLoomapass(triibuPass);
+		
+		System.out.println(triibuPass);
 	}
 
 }

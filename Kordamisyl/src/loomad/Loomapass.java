@@ -17,11 +17,11 @@ public class Loomapass {
 	}
 	
 	public void votaArvele() {
-		//TODO
+		this.algusKp = LocalDate.now();
 	}
 	
 	public void votaArveltMaha(LocalDate kuupaev) {
-		//TODO
+		this.loppKp = kuupaev;
 	}
 	
 }
