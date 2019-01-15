@@ -1,13 +1,13 @@
 package loomad;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class Loom {
 	private String nimi;
 	private String toug;
-	private Date sunniaeg;
+	private LocalDate sunniaeg;
 	
-	public Loom(String nimi, String toug, Date sunniaeg) {
+	public Loom(String nimi, String toug, LocalDate sunniaeg) {
 		this.nimi = nimi;
 		this.toug = toug;
 		this.sunniaeg = sunniaeg;
@@ -20,6 +20,4 @@ public abstract class Loom {
 	public String toString() {
 		return "Loom [nimi=" + nimi + ", toug=" + toug + ", sunniaeg=" + sunniaeg + ", " + "]";
 	}
-	
-	
 }
