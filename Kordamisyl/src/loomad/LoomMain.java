@@ -13,6 +13,7 @@ public class LoomMain {
 		
 		Kass koduloom3 = new Kass("Triibu", "parsia", LocalDate.of(2012, 11, 30));
 		Loomapass triibuPass = new Loomapass(5, "hallikas", false);
+		System.out.println(koduloom3);
 		
 		triibuPass.votaArvele();
 		koduloom3.lisaLoomapass(triibuPass);

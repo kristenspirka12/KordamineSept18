@@ -18,6 +18,6 @@ public abstract class Loom {
 	 */
 	@Override
 	public String toString() {
-		return "Loom [nimi=" + nimi + ", toug=" + toug + ", sunniaeg=" + sunniaeg + ", " + "]";
+		return "Loom [nimi=" + nimi + ", toug=" + toug + ", sunniaeg=" + sunniaeg + "" + "]";
 	}
 }

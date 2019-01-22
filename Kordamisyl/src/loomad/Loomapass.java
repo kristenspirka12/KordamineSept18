@@ -23,5 +23,15 @@ public class Loomapass {
 	public void votaArveltMaha(LocalDate kuupaev) {
 		this.loppKp = kuupaev;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Loomapass [vanus=" + vanus + ", varvus=" + varvus + ", onVaktsineeritud=" + onVaktsineeritud
+				+ ", algusKp=" + algusKp + "]";
+	}
+	
 	
 }
